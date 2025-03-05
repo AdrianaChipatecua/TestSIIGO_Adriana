@@ -1,7 +1,7 @@
 package testSIIGO.screenplay;
 
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
-import testSIIGO.abilities.UseADevice;
+import org.openqa.selenium.chrome.ChromeDriver;
 import testSIIGO.constants.Constants;
 import net.serenitybdd.screenplay.actors.Cast;
 import net.serenitybdd.screenplay.Ability;
@@ -23,7 +23,7 @@ public class TestCast extends Cast {
     @Override
     public Actor actorNamed(String actorName, Ability... abilities) {
         return super.actorNamed(actorName,
-                BrowseTheWeb.with(theDefaultDriverFor(actorName)),
+                BrowseTheWeb.with(new ChromeDriver()),
                 CallAnApi.at(Constants.BASE_PATH)
         );
     }

@@ -7,7 +7,7 @@ public class LoginPage {
     private LoginPage() {}
 
     public static Target INP_EMAIL_FIELD = Target.the("Username field")
-            .located(By.id("siigoSignInName"));
+            .located(By.xpath("//input[@id='siigoSignInName']"));
     public static Target INP_PASSWORD_FIELD = Target.the("Password field")
             .located(By.id("siigoPassword"));
     public static Target BTN_LOGIN_BUTTON = Target.the("Login button")
@@ -16,4 +16,6 @@ public class LoginPage {
             .located(By.id("forgotPassword"));
     public static Target LBL_SIGN_IN = Target.the("Title login page")
             .located(By.linkText("Inicio de sesión"));
+
+
 }
